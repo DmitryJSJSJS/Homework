@@ -1,30 +1,36 @@
 //1
 
-function pow (x, n, i = 0, result = 0){
+var x, n;
+
+x = +prompt('Введите X:');
+n = +prompt('Введите N:');
+
+function pow (){
 
     while (true){
-        x = +prompt('Введите X:');
-        if (!x){
+
+        if (!x && x % 1 === 0){
             alert = ('Целое число');
         }
         else break;
     }
 
     while (true){
-        n = +prompt('Введите N:');
-        if (!n){
+
+        if (!n && n % 1 === 0){
             alert = ('Целое число');
         }
         else break;
     }
 
-    result = x;
-    for (i = 1; i < n; i++){
+    var   result = x;
+
+    for (var i = 1; i < n; i++){
         result *= x;
     }
     return result;
 }
-alert (pow(result));
+alert( pow() );
 
 
 
@@ -64,18 +70,17 @@ function treeSum(arr){
     for (var i = 0; i < arr.length; i++){
         var value = arr[i];
         if (typeof value === 'number' && (!isNaN(value))){
-            sum =+ value;
+            sum += value;
         }
         else if (typeof value === 'object' && value && value.length){
-            sum =+ treeSum(value);
+            sum += treeSum(value);
         }
     }
     return sum;
 }
 
 treeSum ([ 5, 7,
-        [4, [2], 8,
+    [4, [2], 8,
         [1, 3], 2],
-        [9, []],
-        1, 8 ]);
-
+    [9, []],
+    1, 8 ]);
