@@ -18,7 +18,7 @@ while (!secondname);
 do{
     ageyear = +prompt ('Ваш возраст');
 }
-while (ageyear <= 0 && ageyear/ageyear !== 1);
+while (!ageyear && ageyear <= 0);
 
 ageday = ageyear * 365;
 ageyearplus = ageyear + 5;
@@ -45,4 +45,9 @@ else if (sex === false && ageyear >= 58){
     p = ('Да')
 }
 
-alert ('ФИО:' +' ' +familyname +' ' +firstname +' ' +secondname +' ' +'Ваш возраст в годах:' +' ' +ageyear +' ' +'Ваш возраст в днях:' +' ' +ageday +' ' +'Через 5 лет Вам будет:' +' ' +ageyearplus +' ' +'Ваш пол:' +' ' +sex1 +' ' +'Вы на пенсии: ' +p);
+alert ('ФИО:' +' ' +familyname +' ' +firstname +' ' +secondname
+        +'\nВаш возраст в годах: ' +ageyear
+        +'\nВаш возраст в днях: ' +ageday
+        +'\nЧерез 5 лет Вам будет: ' +ageyearplus
+        +'\nВаш пол: ' +sex1
+        +'\nВы на пенсии: ' +p);
