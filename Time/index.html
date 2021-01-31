@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    <style>
+        @font-face {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .clock{
+            color: black;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="clock"></div>
+
+<script>
+
+    let clock =document.querySelector('.clock');
+    let hours;
+    let min;
+    let sec;
+
+    function time() {
+        let date = new Date();
+        hours = date.getHours() < 10 ? '0'+ date.getHours() : date.getHours();
+        min = date.getMinutes() < 10 ? '0'+ date.getMinutes() : date.getMinutes();
+        sec = date.getSeconds() < 10 ? '0'+ date.getSeconds() : date.getSeconds();
+    }
+
+    clock.innerHTML = '${hours}:${min}:${sec}';
+
+    setInterval(time, 1000);
+</script>
+
+</body>
+</html>

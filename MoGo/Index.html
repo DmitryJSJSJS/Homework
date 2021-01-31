@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale-1">
     <link rel ="stylesheet" href="assets/css/style.css">
     <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>Mogo</title>
 </head>
 <body>
 
-<header class="header">
+<header class="header fixed" id="header">
     <div class="container">
         <div class="header_inner">
-            <div class="header_logo">MoGo</div>
-            <nav class="nav">
-                <a class="nav_link" href="#">About</a>
-                <a class="nav_link" href="#">Service</a>
-                <a class="nav_link" href="#">Blog</a>
-                <a class="nav_link" href="#">Work</a>
-                <a class="nav_link" href="#">Contact</a>
+            <div class="header_logo"
+                 data-scroll="#intro">MoGo</div>
+
+            <nav class="nav" id="nav">
+                <a class="nav_link active" href="#"
+                   data-scroll="#about">About</a>
+                <a class="nav_link" href="#"
+                   data-scroll="#service">Service</a>
+                <a class="nav_link" href="#"
+                   data-scroll="#blog">Blog</a>
+                <a class="nav_link" href="#"
+                   data-scroll="#work">Work</a>
+                <a class="nav_link" href="#"
+                   data-scroll="#footer">Contact</a>
                 <a class="nav_link" href="#">
                     <i class="fa fa-shopping-cart"></i>
                 </a>
@@ -27,12 +34,17 @@
                     <i class="fa fa-search"></i>
                 </a>
             </nav>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle_item"></span>
+            </div>
+
         </div>
     </div>
 
 </header>
 
-<div class="intro">
+<div class="intro" id="intro">
 <div class="container">
     <div class="intro_inner">
         <h2 class="intro_suptitle"> Creative Template </h2>
@@ -65,7 +77,7 @@
     </div>
 </div>
 
-<section class="section">
+<section class="section" id="about">
     <div class="container">
         <div class="section_header">
             <h3 class="section_suptitle"> What we do</h3>
@@ -207,7 +219,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="service">
     <div class="container">
 
         <div class="section_header">
@@ -223,42 +235,42 @@
 
         <div class="wedo">
             <div class="wedo_item">
-            <img src="assets/images/wedo.jpg" alt="">
+            <img class="wedo_img" src="assets/images/wedo.jpg" alt="">
         </div>
             <div class="wedo_item">
                <div class="accordion">
-                <div class="accordion_item">
+                <div class="accordion_item" data-collapse="#wedo1">
                 <div class="accordion_header">
                     <img class="accordion_icon"
                          src="assets/images/icon.png" alt="">
                 <div class="accordion_title">Photography</div>
                 </div>
-                <div class="accordion_content"><p>
+                <div class="accordion_content" id="wedo1"><p>
                     TextTextTextTextTextTextTextTextText
                     TextTextTextTextTextTextTextTextText
                     TextTextTextTextTextTextTextTextText</p>
                 </div>
                 </div>
-                   <div class="accordion_item active">
+                   <div class="accordion_item" data-collapse="#wedo2">
                        <div class="accordion_header">
                            <img class="accordion_icon"
                                 src="assets/images/icon1.png" alt="">
                            <div class="accordion_title">Creativity</div>
                        </div>
-                       <div class="accordion_content"><p>
+                       <div class="accordion_content" id="wedo2"><p>
                            TextTextTextTextTextTextTextTextText
                            TextTextTextTextTextTextTextTextText
                            TextTextTextTextTextTextTextTextText</p>
                        </div>
                    </div>
 
-                   <div class="accordion_item active">
+                   <div class="accordion_item"  data-collapse="#wedo3">
                        <div class="accordion_header">
                            <img class="accordion_icon"
                                 src="assets/images/icon2.png" alt="">
                            <div class="accordion_title">Web Design</div>
                        </div>
-                       <div class="accordion_content"><p>
+                       <div class="accordion_content" id="wedo3"><p>
                            TextTextTextTextTextTextTextTextText
                            TextTextTextTextTextTextTextTextText
                            TextTextTextTextTextTextTextTextText</p>
@@ -275,9 +287,9 @@
     <div class="container">
 
     <div class="reviews">
-        <a class="reviews_btn reviews_btn--prev" href="#">Prev</a>
-        <a class="reviews_btn reviews_btn--next" href="#">Next</a>
 
+        <div data-slider>
+        <div>
         <div class="reviews_item">
             <img class="reviews_photo" src="assets/images/photo.jpg" alt="">
             <div class="reviews_text">
@@ -287,8 +299,22 @@
             </div>
             <div class="reviews_author">Jon Doe</div>
         </div>
+        </div>
+
+            <div>
+            <div class="reviews_item">
+                <img class="reviews_photo" src="assets/images/photo.jpg" alt="">
+                <div class="reviews_text">
+                    TextTextTextTextTextTextTextTextText
+                    TextTextTextTextTextTextTextTextText
+                    TextTextTextTextTextTextTextTextText
+                </div>
+                <div class="reviews_author">Jon Doe</div>
+            </div>
+            </div>
     </div>
     </div>
+</div>
 </div>
 
 <section class="section">
@@ -429,7 +455,7 @@
 </div>
     </div>
 
-    <div class="works">
+    <div class="works" id="work">
         <div class="works_col">
         <div class="works_item">
             <img class="works_image" src="assets/images/works/1.jpg" alt="">
@@ -538,9 +564,8 @@
     <div class="container">
 
         <div class="reviews1">
-            <a class="reviews_btn reviews_btn--prev" href="#">Prev</a>
-            <a class="reviews_btn reviews_btn--next" href="#">Next</a>
-
+            <div data-slider>
+            <div>
             <div class="reviews1_item">
                 <img class="reviews1_photo" src="assets/images/photo1.jpg" alt="">
                 <div class="reviews1_text">
@@ -550,6 +575,20 @@
                 </div>
                 <div class="reviews1_author">Jon Doe</div>
             </div>
+        </div>
+
+                <div>
+                    <div class="reviews1_item">
+                        <img class="reviews1_photo" src="assets/images/photo1.jpg" alt="">
+                        <div class="reviews1_text">
+                            TextTextTextTextTextTextTextTextText
+                            TextTextTextTextTextTextTextTextText
+                            TextTextTextTextTextTextTextTextText
+                        </div>
+                        <div class="reviews1_author">Jon Doe</div>
+                    </div>
+                </div>
+    </div>
         </div>
     </div>
 </div>
@@ -599,7 +638,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="blog">
     <div class="container">
 
         <div class="section_header">
@@ -701,8 +740,8 @@
 </div>
 </section>
 
-<footer class="footer">
-    <div class="container">
+<footer class="footer" id="footer">
+    <div class="container" >
         <div class="footer_inner">
             <div class="footer_col footer_col--first">
             <div class="footer_logo">MoGo</div>
@@ -812,5 +851,8 @@
     </div>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/JS/app.js"></script>
 </body>
 </html>
